@@ -8,11 +8,10 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',[MainController::class,'main']);
-Route::get('about',[AboutController::class,'about']);
-Route::get('contact',[ContactController::class,'contact']);
-Route::get('like',[LikeController::class,'like']);
-Route::get('/news',[NewsController::class,'news']);
+Route::get('/',[MainController::class,'main'])->name('main');
+Route::get('/about',[AboutController::class,'about'])->name('about');
+Route::get('/contact',[ContactController::class,'contact'])->name('contact');
+Route::get('/like',[LikeController::class,'like'])->name('like');
+Route::get('/news',[NewsController::class,'news'])->name('news');
 Route::get('/news/{article}',[NewsController::class,'article']);
-Route::get('/profile',[ProfileController::class,'profile']);
-
+Route::get('/profile',[ProfileController::class,'profile'])->name('profile');

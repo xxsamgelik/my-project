@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Models\Users;
-use Illuminate\Routing\Controller;
 
 class LikeController extends Controller
 {
