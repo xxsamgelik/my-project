@@ -61,12 +61,12 @@
                                 <li><a href="{{route('contact')}}">Contacts</a></li>
                                 <li><a href="{{route('like')}}">Feed</a></li>
                                 @auth
-                                    <li><a href="">My account</a></li>
-                                    <li><a href="">Logout</a></li>
+                                    <li><a href="{{route('profile')}}">My account</a></li>
+                                    <li><a href="{{route('logout')}}">Logout</a></li>
                                 @endauth
                                 @guest
-                                    <li><a href="">Login</a></li>
-                                    <li><a href="">Register</a></li>
+                                    <li><a href="{{route('login')}}">Login</a></li>
+                                    <li><a href="{{route('register')}}">Register</a></li>
                                 @endguest
                             </ul>
                         </nav>
