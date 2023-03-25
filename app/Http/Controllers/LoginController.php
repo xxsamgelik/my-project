@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
+
     public function getLoginPage()
     {
         return view('login');
@@ -20,6 +21,19 @@ class LoginController extends Controller
     }
     public function login(Request $request)
     {
+        $validate = $request->validate(
+            [
+                'email'=>'required'
+
+            ]
+        );
+        return back()->withErrors(
+            [
+                'error'=>'Error'
+            ]
+        );
+        dd($validate);
+
         $credentials = [
             'email' => $request->input('email'),
             'password' => $request->input('password')

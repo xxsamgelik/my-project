@@ -13,6 +13,5 @@ class NewsController extends Controller
     public function article(News $article)
     {
 //        return view("news", ['news' => $article]);
-        dd($article->user);
     }
 }

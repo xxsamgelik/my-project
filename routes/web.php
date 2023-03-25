@@ -15,7 +15,9 @@ Route::get('/contact',[ContactController::class,'contact'])->name('contact');
 Route::get('/like',[LikeController::class,'like'])->name('like');
 Route::get('/news',[NewsController::class,'news'])->name('news');
 Route::get('/news/{article}',[NewsController::class,'article']);
-Route::get('/profile',[ProfileController::class,'profile'])->name('profile');
+Route::get('/profile',[ProfileController::class,'profile'])->name('profile.get');
+Route::post('/profile',[ProfileController::class,'changeProfile'])->name('profile.update');
+Route::get('/profile-edit',[\App\Http\Controllers\ProfileEditController::class,'profileEdit'])->name('profileEdit');
 
 Route::group(['controller' => LoginController::class], function () {
     Route::get('/login', 'getLoginPage')->name('loginPage');

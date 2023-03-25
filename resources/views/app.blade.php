@@ -61,7 +61,7 @@
                                 <li><a href="{{route('contact')}}">Contacts</a></li>
                                 <li><a href="{{route('like')}}">Feed</a></li>
                                 @auth
-                                    <li><a href="{{route('profile')}}">My account</a></li>
+                                    <li><a href="{{route('profile.get')}}">My account</a></li>
                                     <li><a href="{{route('logout')}}">Logout</a></li>
                                 @endauth
                                 @guest
