@@ -18,6 +18,7 @@ Route::get('/news/{article}',[NewsController::class,'article']);
 Route::get('/profile',[ProfileController::class,'profile'])->name('profile.get');
 Route::post('/profile',[ProfileController::class,'changeProfile'])->name('profile.update');
 Route::get('/profile-edit',[\App\Http\Controllers\ProfileEditController::class,'profileEdit'])->name('profileEdit');
+Route::post('/contact', [ContactController::class, 'sendFeedback'])->name('contacts.feedback');
 
 Route::group(['controller' => LoginController::class], function () {
     Route::get('/login', 'getLoginPage')->name('loginPage');
@@ -26,3 +27,4 @@ Route::group(['controller' => LoginController::class], function () {
     Route::post('/register', 'register')->name('register');
     Route::get('/logout', 'logout')->name('logout');
 });
+

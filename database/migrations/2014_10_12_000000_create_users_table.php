@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('number')->nullable();
             $table->boolean('is_online')->default(0);
             $table->string('status')->default("В активном поиске");
             $table->string('image')->nullable();
