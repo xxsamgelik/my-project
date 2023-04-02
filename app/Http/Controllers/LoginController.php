@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
 use App\Models\User;
+use App\Http\Requests\RegisterRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -19,24 +21,12 @@ class LoginController extends Controller
     {
         return view('register');
     }
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        $validate = $request->validate(
-            [
-                'email'=>'required'
-
-            ]
-        );
-        return back()->withErrors(
-            [
-                'error'=>'Error'
-            ]
-        );
-        dd($validate);
-
+        $validate = $request->validated();
         $credentials = [
-            'email' => $request->input('email'),
-            'password' => $request->input('password')
+            'email' => $validate['email'],
+            'password' => $validate['password']
         ];
 
         $isRemember = $request->input('remember') == 'on';
@@ -50,17 +40,15 @@ class LoginController extends Controller
         return back()->withErrors([
             'error' => 'Error'
         ]);
-    }
-    public function register(Request $request)
-    {
-        $name = $request->input('name');
-        $password = $request->input('password');
-        $email = $request->input('email');
 
+    }
+    public function register(RegisterRequest $request)
+    {
+        $validated = $request->validated();
         $user = User::create([
-            'name' => $name,
-            'email' => $email,
-            'password' => Hash::make($password)
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'password' => Hash::make($validated['password'])
         ]);
 
         Auth::login($user);

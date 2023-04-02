@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Helpers\Country;
-use App\Models\News;
-use App\Models\User;
 use App\Models\UserInformation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -25,7 +23,8 @@ class ProfileController extends Controller
         $data = [
             'sex'=>$request->input('gender'),
             'date_birthday'=>$request->input('dateofbirth'),
-            'status'=>$request->input('status')
+            'status'=>$request->input('status'),
+            'country'=>$request->input('country'),
         ];
         if (!$user->information) {
             $userInformation = new UserInformation($data);

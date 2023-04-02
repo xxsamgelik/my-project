@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-5 center p-50 background-white b-r-6">
                     <h3>Login to your Account</h3>
-                    <form action="{{ route('login')  }}" method="POST">
+                    <form action="{{ route('login')}}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label class="sr-only">Username or Email</label>

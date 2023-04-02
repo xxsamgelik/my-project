@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfileEditController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',[MainController::class,'main'])->name('main');
@@ -17,8 +18,12 @@ Route::get('/news',[NewsController::class,'news'])->name('news');
 Route::get('/news/{article}',[NewsController::class,'article']);
 Route::get('/profile',[ProfileController::class,'profile'])->name('profile.get');
 Route::post('/profile',[ProfileController::class,'changeProfile'])->name('profile.update');
-Route::get('/profile-edit',[\App\Http\Controllers\ProfileEditController::class,'profileEdit'])->name('profileEdit');
+Route::get('/profile-edit',[ProfileEditController::class,'profileEdit'])->name('profileEdit');
 Route::post('/contact', [ContactController::class, 'sendFeedback'])->name('contacts.feedback');
+
+Route::get('/export-excel', [\App\Http\Controllers\ExcelController::class, 'exportExcel'])->name('export.excel');
+Route::get('/', [\App\Http\Controllers\AdminController::class, 'index'])->name('index');
+
 
 Route::group(['controller' => LoginController::class], function () {
     Route::get('/login', 'getLoginPage')->name('loginPage');
@@ -27,4 +32,5 @@ Route::group(['controller' => LoginController::class], function () {
     Route::post('/register', 'register')->name('register');
     Route::get('/logout', 'logout')->name('logout');
 });
+
 
