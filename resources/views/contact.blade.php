@@ -1,5 +1,7 @@
 @extends('app')
 @section('content')
+    @include('flash-message')
+
     <section id="page-title" data-bg-parallax="images/parallax/5.jpg">
         <div class="container">
             <div class="page-title">
@@ -49,7 +51,12 @@
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                                 </div>
                             @endforeach
+                            @auth
                             <button class="btn" type="submit"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
+                            @endauth
+                            @guest
+                                <a href="{{route('login')}}" class="btn">Register</a>
+                            @endguest
                         </form>
                     </div>
                 </div>

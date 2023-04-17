@@ -14,7 +14,15 @@ class AccountRequest extends FormRequest
     {
         return true;
     }
+    public function rules(): array
+    {
+        return [
 
+            'date_birthday' => 'nullable|date',
+            'sex' => 'nullable|min:2',
+            'country' => 'nullable|min:2',
+        ];
+    }
     /**
      * Get the validation rules that apply to the request.
      *

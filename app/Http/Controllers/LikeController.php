@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Users;
+use App\Models\User;
 
 class LikeController extends Controller
 {
     public function like()
     {
-        $users = Users::all();
+        $users = User::all();
         return view('like',[
             'users'=>$users,
         ]);

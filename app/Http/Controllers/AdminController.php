@@ -33,57 +33,12 @@ class AdminController extends Controller
             'users' => $users
         ]);
     }
-
-//    /**
-//     * Show the form for creating a new resource.
-//     */
-//    public function create()
-//    {
-//        return view('admin.products.create', [
-//            'categories' => Category::query()->where('is_active', 1)->get()
-//        ]);
-//    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-//    public function store(CreateProductRequest $request)
-//    {
-//        $validated = $request->validated();
-//        $product = Product::query()->create($validated);
-//
-//        if ($request->has('files')) {
-//            /** @var UploadedFile $file */
-//            foreach ($request->file('files') as $file) {
-//                $productImage = $this->productService->createProductImage($file);
-//                $product->images()->save($productImage);
-//            }
-//        }
-//
-//        session()->flash('success', 'Product has been successfully created');
-//
-//        return redirect()->route('admin.products.index');
-//    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function destroy(UserServices $userServices)
     {
-        //
+        $userServices->delete();
+
+        session()->flash('success', 'Product has been successfully deleted');
+
+        return back();
     }
-//    public function downloadCsv()
-//    {
-//        $this->productService->downloadCsv(Product::all());
-//    }
-//
-//    public function downloadExcel()
-//    {
-//        $this->productService->downloadExcel(Product::all());
-//    }
-//
-//    public function uploadExcel()
-//    {
-//        $this->productService->uploadExcel();
-//    }
 }

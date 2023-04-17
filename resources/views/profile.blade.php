@@ -18,25 +18,25 @@
                             order to completed changes.</p>
                     </div>
                     <div class="card-body">
-                        <form id="form1" class="form-validate" method="POST" action="{{route("profile.update")}}">
+                        <form id="form1" class="form-validate" method="POST" action="{{route("account.update")}}">
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="gender">Gender</label>
-                                    <select class="form-control" name="gender" required>
+                                    <select class="form-control" name="sex" required>
                                         <option value="">Select your gender</option>
                                         <option>Female</option>
                                         <option>Male</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="gender">Date of Birth</label>
-                                    <input class="form-control" type="date" name="dateofbirth" required>
+                                    <label for="date_birthday">Date of Birth</label>
+                                    <input class="form-control" type="date" name="date_birthday" required value="{{$user->information?->date_birthday}}">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="gender">Status</label>
+                                    <label for="status">Status</label>
                                     <select class="form-control" name="status" required>
                                         <option value="">Select your gender</option>
                                         <option>В поиске</option>

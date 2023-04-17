@@ -3,13 +3,13 @@
     <section id="page-title">
         <div class="container">
             <div class="page-title">
-                <h1>Products</h1>
+                <h1>Пользователи</h1>
             </div>
             <div class="breadcrumb">
                 <ul>
                     <li><a href="{{ route('main') }}">Home</a> </li>
                     <li><a href="{{ route('main') }}">Admin panel</a> </li>
-                    <li class="active"><a href="#">Products</a></li>
+                    <li class="active"><a href="#">Пользователи</a></li>
                 </ul>
             </div>
         </div>
@@ -25,47 +25,44 @@
                     <table id="datatable" class="table table-bordered table-hover" style="width:100%">
                         <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Short description</th>
-                            <th>Price</th>
-                            <th>Sale price</th>
-                            <th>Category</th>
-                            <th>Created at</th>
-                            <th>Status</th>
-                            <th class="noExport">Actions</th>
+                            <th>Имя пользователя</th>
+                            <th>Почта</th>
+                            <th>Статус</th>
+                            <th>Активность сейчас</th>
+                            <th>Пол</th>
+                            <th>Страна</th>
+                            <th>Дата рождения</th>
+                            <th>Дата создания</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($users as $user)
                             <tr>
                                 <td>{{ $user->name }}</td>
-                                <td>{{ $product->email }}</td>
-                                <td>{{ $product->is_online }}</td>
-                                <td>{{ $product->status }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->status ?? "Не указано" }}</td>
                                 @if($user->is_online)
                                     <td><span class="badge badge-pill badge-primary">Active</span></td>
                                 @else
                                     <td><span class="badge badge-pill badge-danger">Not active</span></td>
                                 @endif
                                 <td>
+                                    {{$user->information->sex ?? "Не указано"}}
+                                </td>
+                                <td>
+                                    {{$user->information->country ?? "Не указано"}}
+                                </td>
+                                <td>
+                                    {{$user->information->date_birthday ?? "Не указано"}}
+                                </td>
+                                <td>
+                                    {{$user->created_at ?? "Не указано"}}
                                 </td>
                             </tr>
                         @endforeach
                         </tbody>
-                        <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Date</th>
-                            <th>Salary</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                        </tfoot>
                     </table>
-                    {!! $user->appends(Request::all())->links() !!}
+{{--                    {!! $user->appends(Request::all())->links() !!}--}}
                 </div>
             </div>
         </div>

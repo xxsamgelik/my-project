@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Nette\IOException;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 class ExcelController extends Controller
@@ -35,5 +37,31 @@ class ExcelController extends Controller
         $writer->save('php://output');
 
         exit;
+    }
+    public function uploadExcel()
+    {
+        $reader = IOFactory::createReader('Xlsx');
+        $reader->setReadDataOnly(true);
+        $spreadsheet =$reader->load("products.xlsx");
+        $workSheet = $spreadsheet->getActiveSheet();
+        $lastColumn= $workSheet->getHighestColumn();
+        foreach($workSheet->getRowIterator() as $rowIndex =>$row)
+        {
+            if($rowIndex!=1)
+            {
+                $array=$workSheet->rangeToArray("A".$rowIndex. ":" . $lastColumn . $rowIndex);
+                $array = $array[0];
+                User::query()->create([
+                'name'=>$array[1],
+                'email'=>$array[2],
+                'Sale price'=>$array[3],
+                'Description'=>$array[4],
+                'Category name'=>$array[5],
+                'Status'=>$array[6],
+                'Created at'=>$array[7],
+                    'password'=>$array[8],
+            ]);
+            }
+        }
     }
 }

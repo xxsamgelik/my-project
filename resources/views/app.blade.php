@@ -9,10 +9,11 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>POLO | The Multi-Purpose HTML5 Template</title>
+    <title>{{__('main_title')}}</title>
     <!-- Stylesheets & Fonts -->
-    <link href="css/plugins.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('/css/plugins.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
 </head>
 <body>
 <div class="body-inner">
@@ -40,11 +41,19 @@
                         </li>
                         <li>
                             <div class="p-dropdown">
-                                <a href="#"><i class="icon-globe"></i><span>EN</span></a>
+                                <a href="#"><i class="icon-globe"></i>
+                                    <span>
+                                        @if(session()->get('locale') == 'ru')
+                                            RU
+                                            <h1>{{session()->get('locale')}}</h1>
+                                        @else
+                                            EN
+                                        @endif
+                                    </span>
+                                </a>
                                 <ul class="p-dropdown-content">
-                                    <li><a href="#">French</a></li>
-                                    <li><a href="#">Spanish</a></li>
-                                    <li><a href="#">English</a></li>
+                                    <li><a href="{{ route('changeLang', ['lang' => 'en']) }}">English</a></li>
+                                    <li><a href="{{ route('changeLang', ['lang' => 'ru']) }}">Русский</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -57,16 +66,28 @@
                     <div class="container">
                         <nav>
                             <ul>
-                                <li><a href="{{route('about')}}">About us</a></li>
-                                <li><a href="{{route('contact')}}">Contacts</a></li>
-                                <li><a href="{{route('like')}}">Feed</a></li>
+                                <li><a href="{{route('about')}}">{{__('about')}}</a></li>
+                                <li><a href="{{route('contact')}}">{{__('contacts')}}</a></li>
                                 @auth
-                                    <li><a href="{{route('profile.get')}}">My account</a></li>
-                                    <li><a href="{{route('logout')}}">Logout</a></li>
+                                <li><a href="{{route('like')}}">{{__('feed')}}</a></li>
+                                @endauth
+                                <li><a href="{{route('news')}}">{{__('news')}}</a></li>
+                                @auth
+                                    <li><a href="{{route('profile.get')}}">{{__('account')}}</a></li>
+                                    <li><a href="{{route('logout')}}">{{__('logout')}}</a></li>
+                                    @if(Auth::user()->is_admin)
+                                        <li class="dropdown"><a href="#">{{__('admin')}}</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="{{ route('index') }}">{{__('users')}}</a></li>
+                                            </ul>
+                                        </li>
+                                    @endif
+{{--                                        <a class="ml-2" href="{{ route('admin.products.delete', ['product' => $product->id]) }}" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>--}}
+                                    </td>
                                 @endauth
                                 @guest
-                                    <li><a href="{{route('login')}}">Login</a></li>
-                                    <li><a href="{{route('register')}}">Register</a></li>
+                                    <li><a href="{{route('login')}}">{{__('login')}}</a></li>
+                                    <li><a href="{{route('register')}}">{{__('register')}}</a></li>
                                 @endguest
                             </ul>
                         </nav>

@@ -21,6 +21,6 @@ class ContactController extends Controller
             'message' => $validated['message'],
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with('Отлично!','Ваше обращение отправлено!');
     }
 }

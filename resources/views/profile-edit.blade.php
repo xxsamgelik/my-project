@@ -20,8 +20,8 @@
                         <div class="card-body">
                                     <p>Пол: {{$profile->information->sex ?? "null"}}</p>
                                     <p>Семейное положение: {{$profile->information->status ?? "null"}}</p>
-                                    <p>Дата рождения: {{$profile->information->status ?? "null"}}</p>
-                                    <p>Страна: {{$profile->information->status ?? "null"}}</p>
+                                    <p>Дата рождения: {{$profile->information->date_birthday ?? "null"}}</p>
+                                    <p>Страна: {{$profile->information->country ?? "null"}}</p>
                             <a type="submit" class="btn m-t-30 mt-3" href="{{route('profile.update')}}">Изменить</a>
                             </form>
                         </div>

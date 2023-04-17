@@ -35,7 +35,9 @@
                         </div>
                     </form>
                     <p class="small">Don't have an account yet? <a href="{{ route('registerPage') }}">Register New Account</a>
+                    <p class="small">Forgot password? <a href="{{ route('password.request') }}">Reset password</a>
                     </p>
+
                 </div>
             </div>
         </div>

@@ -38,6 +38,8 @@
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <button class="btn" type="submit">Register New Account </button>
+                                    <p class="small"><a href="{{ route('google.redirect') }}"><img src="{{asset("/img/github_logo.png")}}" alt="" srcset="" style="width: 40px"></a></p>
+                                    <a href="{{ route('git.redirect') }}"><img src="{{asset("/img/google.png")}}" alt="" srcset="" style="width: 30px"></a>
                                 </div>
                             </div>
                         </form>
