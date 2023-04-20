@@ -22,7 +22,6 @@ Route::get('/contact',[ContactController::class,'contact'])->name('contact');
 Route::get('/like',[LikeController::class,'like'])->name('like');
 Route::get('/news',[NewsController::class,'news'])->name('news');
 Route::get('/news/{article}',[NewsController::class,'article']);
-Route::get('/profile',[ProfileController::class,'profile'])->name('profile.get');
 //Route::post('/profile',[ProfileController::class,'changeProfile'])->name('profile.update');
 //Route::get('/profile-edit',[ProfileEditController::class,'profileEdit'])->name('profileEdit');
 Route::post('/contact', [ContactController::class, 'sendFeedback'])->name('contacts.feedback');
@@ -32,11 +31,11 @@ Route::post('/forget-password',[ForgotPasswordController::class,'sendResetLink']
 Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'resetPasswordView'])->middleware('guest')->name('password.reset');
 Route::post('reset-password',[ForgotPasswordController::class,'resetPassword'])->middleware('guest')->name('password.update');
 
-Route::get('/export-excel', [\App\Http\Controllers\ExcelController::class, 'exportExcel'])->name('export.excel');
 
 Route::get('/upload-excel', [\App\Http\Controllers\ExcelController::class, 'uploadExcel'])->name('upload.excel');
 
 Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('index');
+Route::get('/export-excel', [\App\Http\Controllers\AdminController::class, 'exportExcel'])->name('export.excel');
 
 Route::get('/email/verify', [VerificationEmailController::class, 'view'])->middleware('auth')->name('verification.notice');
 Route::get('/email/verify/{id}/{hash}', [VerificationEmailController::class, 'handle'])->middleware(['auth', 'signed'])->name('verification.verify');

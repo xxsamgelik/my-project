@@ -18,6 +18,8 @@
         <div class="container">
             <div class="row mb-3">
                 <div class="col-lg-6">
+                    <a href="{{ route('export.excel') }}" class="btn btn-light"><i class="icon-plus"></i>Export to excel</a>
+
                 </div>
             </div>
             <div class="row">

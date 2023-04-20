@@ -45,7 +45,7 @@ class User extends Authenticatable implements MustVerifyEmail,CanResetPassword
         'email_verified_at' => 'datetime',
     ];
 
-    public function information()
+    public function information(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne(UserInformation::class);
     }

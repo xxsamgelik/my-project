@@ -12,7 +12,6 @@ class AccountService
     {
         /** @var User $user */
         $user = Auth::user();
-
         if ($user) {
             $prepareData = [
                 'birthday' => $data['date_birthday'],

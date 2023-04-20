@@ -14,7 +14,7 @@ class AccountController extends Controller
     {
         $geos = Country::getAllGeos();
 
-        return view('auth.account', [
+        return view('account', [
             'user' => Auth::user(),
             'geos' => $geos
         ]);

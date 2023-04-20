@@ -45,7 +45,6 @@
                                     <span>
                                         @if(session()->get('locale') == 'ru')
                                             RU
-                                            <h1>{{session()->get('locale')}}</h1>
                                         @else
                                             EN
                                         @endif
@@ -73,7 +72,7 @@
                                 @endauth
                                 <li><a href="{{route('news')}}">{{__('news')}}</a></li>
                                 @auth
-                                    <li><a href="{{route('profile.get')}}">{{__('account')}}</a></li>
+{{--                                    <li><a href="{{route('profile.get')}}">{{__('account')}}</a></li>--}}
                                     <li><a href="{{route('logout')}}">{{__('logout')}}</a></li>
                                     @if(Auth::user()->is_admin)
                                         <li class="dropdown"><a href="#">{{__('admin')}}</a>
@@ -109,6 +108,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
+
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="widget">
