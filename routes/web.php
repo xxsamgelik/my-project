@@ -68,3 +68,7 @@ Route::get('/google/auth/callback', [\App\Http\Controllers\AuthWithAppController
 
 Route::get('/github/auth/redirect', [\App\Http\Controllers\AuthWithAppController::class,'gitRedirect'])->name('git.redirect');
 Route::get('/github/auth/callback', [\App\Http\Controllers\AuthWithAppController::class,'gitCallback'])->name('git.callback');
+
+
+Route::get("/order/payment/create",[\App\Http\Controllers\OrderController::class,'createPay'])->name("order.create");
+Route::get("/order/payment/callback",[\App\Http\Controllers\OrderController::class,'callbackPay'])->name("order.callback");
