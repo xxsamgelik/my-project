@@ -62,7 +62,6 @@ Route::group(['prefix' => '/account', 'controller' => AccountController::class, 
 });
 
 
-
 Route::get('/google/auth/redirect', [\App\Http\Controllers\AuthWithAppController::class,'googleRedirect'])->name('google.redirect');
 Route::get('/google/auth/callback', [\App\Http\Controllers\AuthWithAppController::class,'googleCallback'])->name('google.callback');
 

@@ -22,7 +22,6 @@ class AccountRequest extends FormRequest
             'sex' => 'nullable|min:2',
             'country' => 'nullable|min:2',
             'status'=>'required',
-            'gender'=>'required',
         ];
     }
     /**

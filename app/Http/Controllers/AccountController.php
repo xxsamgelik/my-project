@@ -13,7 +13,6 @@ class AccountController extends Controller
     public function account(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
         $geos = Country::getAllGeos();
-
         return view('account', [
             'user' => Auth::user(),
             'geos' => $geos
@@ -23,6 +22,6 @@ class AccountController extends Controller
     public function updateAccount(AccountRequest $request, AccountService $accountService): RedirectResponse
     {
         $accountService->updateAccount($request->validated());
-        return back();
+        return redirect()->back();
     }
 }

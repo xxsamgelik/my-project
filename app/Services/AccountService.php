@@ -14,7 +14,7 @@ class AccountService
         $user = Auth::user();
         if ($user) {
             $prepareData = [
-                'birthday' => $data['date_birthday'],
+                'date_birthday' => $data['date_birthday'],
                 'sex' => $data['sex'],
                 'status'=>$data['status'],
                 'country' => $data['country'],
@@ -26,7 +26,6 @@ class AccountService
                 $user->information()->update($prepareData);
             }
         }
-
         return $user;
     }
 }

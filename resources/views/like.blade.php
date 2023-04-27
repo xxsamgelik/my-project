@@ -11,7 +11,7 @@
                 <div class="post-item border">
                     <div class="post-item-wrap">
                         <div class="post-image">
-                            <a href="{{route('people.add')}}">
+{{--                            <a href="{{route('people.add')}}">--}}
                                 <img alt="" src="{{$users[4]->image}}">
                             </a>
                             <span class="post-meta-category"><a href="">Lifestyle</a></span >
