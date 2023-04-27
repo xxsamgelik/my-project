@@ -19,7 +19,6 @@ class AccountService
                 'status'=>$data['status'],
                 'country' => $data['country'],
             ];
-
             if (!$user->information) {
                 $userInformation = new UserInformation($prepareData);
                 $user->information()->save($userInformation);

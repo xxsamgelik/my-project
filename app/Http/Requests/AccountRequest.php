@@ -21,6 +21,8 @@ class AccountRequest extends FormRequest
             'date_birthday' => 'nullable|date',
             'sex' => 'nullable|min:2',
             'country' => 'nullable|min:2',
+            'status'=>'required',
+            'gender'=>'required',
         ];
     }
     /**
