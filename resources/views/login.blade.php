@@ -9,11 +9,15 @@
                         @csrf
                         <div class="form-group">
                             <label class="sr-only">Username or Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Email">
+                            <label>
+                                <input type="email" name="email" class="form-control" placeholder="Email">
+                            </label>
                         </div>
                         <div class="form-group">
                             <label class="sr-only">Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <label>
+                                <input type="password" name="password" class="form-control" placeholder="Password">
+                            </label>
                         </div>
                         <div class="form-group form-inline text-left">
                             <div class="form-check">

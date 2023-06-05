@@ -9,7 +9,9 @@
                         @csrf
                         <div class="form-group">
                             <label class="sr-only">Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Email">
+                            <label>
+                                <input type="email" name="email" class="form-control" placeholder="Email">
+                            </label>
                         </div>
                         <div class="text-left form-group">
                             <button type="submit" class="btn">Reset</button>

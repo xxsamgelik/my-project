@@ -10,15 +10,21 @@
                         <input type="hidden" name="token" value="{{ $token }}">
                         <div class="form-group">
                             <label class="sr-only">Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Email">
+                            <label>
+                                <input type="email" name="email" class="form-control" placeholder="Email">
+                            </label>
                         </div>
                         <div class="form-group">
                             <label class="sr-only">Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <label>
+                                <input type="password" name="password" class="form-control" placeholder="Password">
+                            </label>
                         </div>
                         <div class="form-group">
                             <label class="sr-only">Password confirmation</label>
-                            <input type="password" name="password_confirmation" class="form-control" placeholder="Password confirmation">
+                            <label>
+                                <input type="password" name="password_confirmation" class="form-control" placeholder="Password confirmation">
+                            </label>
                         </div>
                         <div class="text-left form-group">
                             <button type="submit" class="btn">Confirm</button>

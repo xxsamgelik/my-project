@@ -12,16 +12,15 @@
                     <div class="post-item-wrap">
                         <div class="post-image">
 {{--                            <a href="{{route('people.add')}}">--}}
-                                <img alt="" src="{{$users[4]->image}}">
-                            </a>
+                                <img alt="" src="{{$users[0]->image}}">
                             <span class="post-meta-category"><a href="">Lifestyle</a></span >
                         </div>
                         <div class="post-item-description">
                                 <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
-                                    {{$users[4]->created_at->format("d M H:i")}}
+                                    {{$users[0]->created_at->format("d M H:i")}}
                                 </span>
                             <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[4]->name}}
+                            <h2><a href="#">{{$users[0]->name}}
                                 </a></h2>
                             <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
                                 dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
@@ -33,7 +32,7 @@
                     <div class="post-item-wrap">
                         <div class="post-image">
                             <a href="#">
-                                <img alt="" src="{{$users[5]->image}}">
+                                <img alt="" src="{{$users[1]->image}}">
                             </a>
                             <span class="post-meta-category"><a href="">Lifestyle</a></span>
                         </div>
@@ -42,7 +41,7 @@
                                     {{$users[1]->created_at->format("d M H:i")}}
                                 </span>
                             <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[5]->name}}
+                            <h2><a href="#">{{$users[1]->name}}
                                 </a></h2>
                             <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
                                 dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
@@ -54,91 +53,7 @@
                     <div class="post-item-wrap">
                         <div class="post-image">
                             <a href="#">
-                                <img alt="" src="{{$users[6]->image}}">
-                            </a>
-                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
-                        </div>
-                        <div class="post-item-description">
-                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
-                                    {{$users[6]->created_at->format("d M H:i")}}
-                                </span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[6]->name}}
-                                </a></h2>
-                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
-                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-image">
-                            <a href="#">
-                                <img alt="" src="{{$users[5]->image}}">
-                            </a>
-                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
-                        </div>
-                        <div class="post-item-description">
-                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
-                                    {{$users[5]->created_at->format("d M H:i")}}
-                                </span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[5]->name}}
-                                </a></h2>
-                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
-                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-image">
-                            <a href="#">
-                                <img alt="" src="{{$users[6]->image}}">
-                            </a>
-                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
-                        </div>
-                        <div class="post-item-description">
-                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
-                                    {{$users[6]->created_at->format("d M H:i")}}
-                                </span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[6]->name}}
-                                </a></h2>
-                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
-                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-image">
-                            <a href="#">
-                                <img alt="" src="{{$users[5]->image}}">
-                            </a>
-                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
-                        </div>
-                        <div class="post-item-description">
-                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
-                                    {{$users[6]->created_at->format("d M H:i")}}
-                                </span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[6]->name}}
-                                </a></h2>
-                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
-                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-image">
-                            <a href="#">
-                                <img alt="" src="{{$users[5]->image}}">
+                                <img alt="" src="{{$users[2]->image}}">
                             </a>
                             <span class="post-meta-category"><a href="">Lifestyle</a></span>
                         </div>
@@ -147,7 +62,7 @@
                                     {{$users[2]->created_at->format("d M H:i")}}
                                 </span>
                             <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[5]->name}}
+                            <h2><a href="#">{{$users[2]->name}}
                                 </a></h2>
                             <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
                                 dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
@@ -159,28 +74,7 @@
                     <div class="post-item-wrap">
                         <div class="post-image">
                             <a href="#">
-                                <img alt="" src="{{$users[4]->image}}">
-                            </a>
-                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
-                        </div>
-                        <div class="post-item-description">
-                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
-                                    {{$users[2]->created_at->format("d M H:i")}}
-                                </span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[6]->name}}
-                                </a></h2>
-                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
-                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-image">
-                            <a href="#">
-                                <img alt="" src="{{$users[4]->image}}">
+                                <img alt="" src="{{$users[0]->image}}">
                             </a>
                             <span class="post-meta-category"><a href="">Lifestyle</a></span>
                         </div>
@@ -189,7 +83,7 @@
                                     {{$users[0]->created_at->format("d M H:i")}}
                                 </span>
                             <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[6]->name}}
+                            <h2><a href="#">{{$users[0]->name}}
                                 </a></h2>
                             <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
                                 dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
@@ -201,16 +95,121 @@
                     <div class="post-item-wrap">
                         <div class="post-image">
                             <a href="#">
-                                <img alt="" src="{{$users[5]->image}}">
+                                <img alt="" src="{{$users[0]->image}}">
                             </a>
                             <span class="post-meta-category"><a href="">Lifestyle</a></span>
                         </div>
                         <div class="post-item-description">
                                 <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
-                                    {{$users[5]->created_at->format("d M H:i")}}
+                                    {{$users[0]->created_at->format("d M H:i")}}
                                 </span>
                             <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                            <h2><a href="#">{{$users[4]->name}}
+                            <h2><a href="#">{{$users[0]->name}}
+                                </a></h2>
+                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
+                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
+                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-item border">
+                    <div class="post-item-wrap">
+                        <div class="post-image">
+                            <a href="#">
+                                <img alt="" src="{{$users[0]->image}}">
+                            </a>
+                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
+                        </div>
+                        <div class="post-item-description">
+                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
+                                    {{$users[0]->created_at->format("d M H:i")}}
+                                </span>
+                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
+                            <h2><a href="#">{{$users[0]->name}}
+                                </a></h2>
+                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
+                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
+                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-item border">
+                    <div class="post-item-wrap">
+                        <div class="post-image">
+                            <a href="#">
+                                <img alt="" src="{{$users[0]->image}}">
+                            </a>
+                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
+                        </div>
+                        <div class="post-item-description">
+                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
+                                    {{$users[0]->created_at->format("d M H:i")}}
+                                </span>
+                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
+                            <h2><a href="#">{{$users[0]->name}}
+                                </a></h2>
+                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
+                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
+                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-item border">
+                    <div class="post-item-wrap">
+                        <div class="post-image">
+                            <a href="#">
+                                <img alt="" src="{{$users[0]->image}}">
+                            </a>
+                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
+                        </div>
+                        <div class="post-item-description">
+                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
+                                    {{$users[0]->created_at->format("d M H:i")}}
+                                </span>
+                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
+                            <h2><a href="#">{{$users[0]->name}}
+                                </a></h2>
+                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
+                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
+                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-item border">
+                    <div class="post-item-wrap">
+                        <div class="post-image">
+                            <a href="#">
+                                <img alt="" src="{{$users[0]->image}}">
+                            </a>
+                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
+                        </div>
+                        <div class="post-item-description">
+                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
+                                    {{$users[0]->created_at->format("d M H:i")}}
+                                </span>
+                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
+                            <h2><a href="#">{{$users[0]->name}}
+                                </a></h2>
+                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
+                                dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
+                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-item border">
+                    <div class="post-item-wrap">
+                        <div class="post-image">
+                            <a href="#">
+                                <img alt="" src="{{$users[0]->image}}">
+                            </a>
+                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
+                        </div>
+                        <div class="post-item-description">
+                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
+                                    {{$users[0]->created_at->format("d M H:i")}}
+                                </span>
+                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
+                            <h2><a href="#">{{$users[0]->name}}
                                 </a></h2>
                             <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo
                                 dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
@@ -242,6 +241,5 @@
 
     <!--Template functions-->
     <script src="{{asset("/js/functions.js")}}"></script>
-    </body>
-    @endsection
-    </html>
+@endsection
+

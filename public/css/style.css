@@ -6629,6 +6629,10 @@ Portfolio
 #footer .widget-categories a {
   color: #888;
 }
+#footer
+{
+    max-height: 100%;
+}
 
 /*
         .twitter-widget ul {

@@ -14,19 +14,27 @@
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <label class="sr-only">Name</label>
-                                    <input type="text" name="name" placeholder="Name" class="form-control">
+                                    <label>
+                                        <input type="text" name="name" placeholder="Name" class="form-control">
+                                    </label>
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <label class="sr-only">Email</label>
-                                    <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                    <label>
+                                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                    </label>
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <label class="sr-only">Password</label>
-                                    <input type="password" name="password" placeholder="Password" class="form-control" required>
+                                    <label>
+                                        <input type="password" name="password" placeholder="Password" class="form-control" required>
+                                    </label>
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <label class="sr-only">Confirm password</label>
-                                    <input type="password" name="password_confirmation" placeholder="Password confirm" class="form-control" required>
+                                    <label>
+                                        <input type="password" name="password_confirmation" placeholder="Password confirm" class="form-control" required>
+                                    </label>
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     @foreach($errors->all() as $key => $error)

@@ -1,21 +1,11 @@
 @extends('app')
 @section('content')
-    </div>
-</body>
-</nav>
 <div class="body-inner">
     <div class="header-inner">
         <div class="container">
-            <div id="logo">
-                <a href="index.html">
-                </a>
             </div>
             <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
                         class="icon-x"></i></a>
-                <form class="search-form" action="search-results-page.html" method="get">
-                    <input class="form-control" name="q" type="text" placeholder="Type & Search..."/>
-                    <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                </form>
             </div>
             <!-- end: search -->
             <!--Header Extras-->
@@ -64,7 +54,7 @@
                                 <div class="post-item-wrap">
                                     <div class="post-image">
                                         <a href="#"> <img alt="" src="{{asset($news[1]->image)}}" style="width: 700px">
-                                        </a> <span class="post-meta-category"><a href="">Science</a></span></div>
+                                        </a> <span class="post-meta-category"><a href="">Lifestyle</a></span></div>
                                     <div class="post-item-description"><span class="post-meta-date"><i
                                                 class="fa fa-calendar-o"></i>Запостил: {{$news[1]->created_at}}</span>
                                         <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
@@ -76,10 +66,9 @@
                             </div>
                             <div class="post-item border">
                                 <div class="post-item-wrap">
-                                    <div class="post-video">
-                                        <iframe src="{{$news[2]->image}}" width="400" height="580" frameborder="0"
-                                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                        <span class="post-meta-category"><a href="">Video</a></span></div>
+                                    <div class="post-image">
+                                        <a href="#"> <img alt="" src="{{asset($news[2]->image)}}" style="width: 700px">
+                                        </a> <span class="post-meta-category"><a href="">Lifestyle</a></span></div>
                                     <div class="post-item-description"><span class="post-meta-date"><i
                                                 class="fa fa-calendar-o"></i>Запостил: {{$news[2]->created_at}}</span>
                                         <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
@@ -93,7 +82,7 @@
                                 <div class="post-item-wrap">
                                     <div class="post-image">
                                         <a href="#"> <img alt="" src="{{asset($news[3]->image)}}" style="width: 700px">
-                                        </a> <span class="post-meta-category"><a href="">Science</a></span></div>
+                                        </a> <span class="post-meta-category"><a href="">Lifestyle</a></span></div>
                                     <div class="post-item-description"><span class="post-meta-date"><i
                                                 class="fa fa-calendar-o"></i>Запостил: {{$news[3]->created_at}}</span>
                                         <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
@@ -111,10 +100,3 @@
             @endsection
         </div>
     </div>
-</div>
-<script src="js/jquery.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/functions.js"></script>
-</body>
-
-</html>

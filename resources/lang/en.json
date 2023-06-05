@@ -1,5 +1,6 @@
 {
-    "main_title": "POLO",
+    "main_title": "ROMAN",
+    "logo": "ROMAN",
     "about": "About us",
     "contacts": "Contacts",
     "feed": "Feed",
@@ -11,7 +12,26 @@
     "login": "Login",
     "register": "Register",
     "welcome": "Welcome to the dating site",
-    "main_paragraph": "Looking for a serious relationship, love or intimacy? Do you want to meet interesting people online? Then our free dating site in Minsk will save you time looking for the right contacts.\n\n                        Dating on the Internet organized by us begins with registration on the site or authorization through one of the social networks. This is followed by a free compatibility test to speed up the search for a soulmate or new friends.",
-    "why_me": "Why us?"
+    "main_paragraph": "Looking for a serious relationship, love or intimacy? Do you want to meet interesting people online? Then our free dating site in Minsk will save you time looking for the right contacts. Dating on the Internet organized by us begins with registration on the site or authorization through one of the social networks. This is followed by a free compatibility test to speed up the search for a soulmate or new friends.",
+    "why_me": "Why us?",
+    "data_sating": "A dating site in Minsk has possible advantages: numerous questionnaires from the city, region and throughout Belarus; Only real photos of guys and girls without bots or spam; Prompt response of the technical support service on all issues.",
+    "widget-title": "ROMAN DATA SATING",
+    "with_love": "Made with love xxsamgelik@mail.ru",
+    "contact_us": "Contact Us",
+    "about_us": "Hello! We are happy to welcome you to our dating site! We are a team of professionals who are passionate about helping people find meaningful connections and build long-term relationships. Our mission is to create a safe and welcoming environment where singles people can meet, connect and get to know each other without any pressure or judgment. We believe that online dating should be fun, easy and accessible to all. That's why that's why we've designed our platform to be user-friendly, intuitive and packed with innovative features that make it easy to find the perfect match. Our team consists of experienced developers, designers and customer support specialists, who Work tirelessly to make your online dating experience seamless and enjoyable. We always We always listen to your feedback and suggestions to improve our services and make your experience even better. better. At our dating site we value your privacy and security. We use the latest technologies encryption and advanced security protocols to protect your personal information and ensure\n                    safe and secure\n                    secure online dating.\n                    Thank you for choosing our dating site. We hope you find what you're looking for, and we wish you all the Best of luck in your search for love and companionship! Translated with www.DeepL.com/Translator (free version)",
+    "man_gender": "Mans",
+    "women_gender": "Girls",
+    "statistic": "The user statistics are described above.",
+    "we_close": "We are close!",
+    "get_touch": "GET IN TOUCH",
+    "we_strong": "You are strong! Contact with us.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "number": "Number",
+    "enter_name": "Enter your name",
+    "enter_email": "Enter your email",
+    "enter_message": "Enter your message",
+    "enter_number": "Enter your number"
 
 }
