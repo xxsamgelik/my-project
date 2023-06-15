@@ -32,7 +32,7 @@
                 <section id="page-content">
                     <div class="container">
                         <div class="page-title">
-                            <h1 style="text-align: center">Новости</h1>
+                            <h1 style="text-align: center">{{__('news')}}</h1>
                         </div>
                         <div id="blog" class="grid-layout post-1-columns m-b-30" data-item="post-item">
                             <!-- Post item-->

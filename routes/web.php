@@ -71,4 +71,3 @@ Route::get('/github/auth/callback', [\App\Http\Controllers\AuthWithAppController
 
 Route::get("/order/payment/create",[\App\Http\Controllers\OrderController::class,'createPay'])->name("order.create");
 Route::get("/order/payment/callback",[\App\Http\Controllers\OrderController::class,'callbackPay'])->name("order.callback");
-

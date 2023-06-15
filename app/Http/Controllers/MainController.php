@@ -22,4 +22,15 @@ class MainController extends Controller
 
         return redirect()->back();
     }
+    public function search(Request $request)
+    {
+        $query = $request->query('query');
+        $users = User::where('name', 'LIKE', "%{$query}%")->get();
+
+        return view('like', [
+            'users' => $users,
+        ]);
+    }
+
+
 }

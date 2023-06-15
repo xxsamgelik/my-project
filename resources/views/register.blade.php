@@ -9,31 +9,31 @@
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <h3>Register New Account</h3>
-                                    <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                                    <h3>{{__('register_now')}}</h3>
+                                    <p>{{__('text_register')}}</p>
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <label class="sr-only">Name</label>
                                     <label>
-                                        <input type="text" name="name" placeholder="Name" class="form-control">
+                                        <input type="text" name="name" placeholder="{{__('name')}}" class="form-control">
                                     </label>
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <label class="sr-only">Email</label>
                                     <label>
-                                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                        <input type="email" name="email" placeholder="{{__('email')}}" class="form-control" required>
                                     </label>
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <label class="sr-only">Password</label>
                                     <label>
-                                        <input type="password" name="password" placeholder="Password" class="form-control" required>
+                                        <input type="password" name="password" placeholder="{{__('password')}}" class="form-control" required>
                                     </label>
                                 </div>
                                 <div class="col-lg-12 form-group">
                                     <label class="sr-only">Confirm password</label>
                                     <label>
-                                        <input type="password" name="password_confirmation" placeholder="Password confirm" class="form-control" required>
+                                        <input type="password" name="password_confirmation" placeholder="{{__('password_confirm')}}" class="form-control" required>
                                     </label>
                                 </div>
                                 <div class="col-lg-12 form-group">
@@ -45,7 +45,7 @@
                                     @endforeach
                                 </div>
                                 <div class="col-lg-12 form-group">
-                                    <button class="btn" type="submit">Register New Account </button>
+                                    <button class="btn" type="submit">{{__('register_now')}}</button>
                                     <p class="small"><a href="{{ route('google.redirect') }}"><img src="{{asset("/img/google.png")}}" alt="" srcset="" style="width: 40px"></a></p>
                                     <a href="{{ route('git.redirect') }}"><img src="{{asset("/img/github_logo.png")}}" alt="" srcset="" style="width: 30px"></a>
                                 </div>

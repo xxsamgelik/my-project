@@ -24,4 +24,5 @@ class AccountController extends Controller
         $accountService->updateAccount($request->validated());
         return redirect()->back();
     }
+
 }
