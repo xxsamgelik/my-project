@@ -37,7 +37,7 @@ class MainController extends Controller
             $users->where('name', 'LIKE', "%{$query}%");
         }
 
-        $users = $users->paginate(3);
+        $users = $users->paginate(5);
 
         return view('like', [
             'users' => $users,

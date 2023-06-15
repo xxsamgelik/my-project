@@ -48,8 +48,7 @@
             <!-- end: Blog -->
             <!-- Pagination --><!-- end: Pagination -->
         </div>
-            {!! $users->appends(Request::all())->links() !!}
-
+            {!! $users->links() !!}
             <!-- end: post content -->
     </section> <!-- end: Content -->
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>

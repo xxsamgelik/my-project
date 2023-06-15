@@ -34,65 +34,25 @@
                         <div class="page-title">
                             <h1 style="text-align: center">{{__('news')}}</h1>
                         </div>
+
                         <div id="blog" class="grid-layout post-1-columns m-b-30" data-item="post-item">
-                            <!-- Post item-->
+                            @for($i=0;$i<count($news);$i++)
                             <div class="post-item border">
                                 <div class="post-item-wrap">
                                     <div class="post-image">
-                                        <a href="#"> <img alt="" src="{{asset($news[0]->image)}}" style="width: 250px;">
+                                        <a href="#"> <img alt="" src="{{asset($news[$i]->image)}}" style="width: 250px;">
                                         </a> <span class="post-meta-category"><a href="">Lifestyle</a></span></div>
                                     <div class="post-item-description"><span class="post-meta-date"><i
                                                 class="fa fa-calendar-o"></i>Запостил: {{$news[0]->created_at}}</span>
                                         <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                                        <h2><a href="#">{{$news[0]->title}} </a></h2>
-                                        <p>{{$news[0]->content}}</p>
-                                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-item border">
-                                <div class="post-item-wrap">
-                                    <div class="post-image">
-                                        <a href="#"> <img alt="" src="{{asset($news[1]->image)}}" style="width: 700px">
-                                        </a> <span class="post-meta-category"><a href="">Lifestyle</a></span></div>
-                                    <div class="post-item-description"><span class="post-meta-date"><i
-                                                class="fa fa-calendar-o"></i>Запостил: {{$news[1]->created_at}}</span>
-                                        <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                                        <h2><a href="#">{{$news[1]->title}}</a></h2>
-                                        <p>{{$news[1]->content}}</p>
-                                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-item border">
-                                <div class="post-item-wrap">
-                                    <div class="post-image">
-                                        <a href="#"> <img alt="" src="{{asset($news[2]->image)}}" style="width: 700px">
-                                        </a> <span class="post-meta-category"><a href="">Lifestyle</a></span></div>
-                                    <div class="post-item-description"><span class="post-meta-date"><i
-                                                class="fa fa-calendar-o"></i>Запостил: {{$news[2]->created_at}}</span>
-                                        <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                                        <h2><a href="#">{{$news[2]->title}}</a></h2>
-                                        <p>{{$news[2]->content}}</p>
-                                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-item border">
-                                <div class="post-item-wrap">
-                                    <div class="post-image">
-                                        <a href="#"> <img alt="" src="{{asset($news[3]->image)}}" style="width: 700px">
-                                        </a> <span class="post-meta-category"><a href="">Lifestyle</a></span></div>
-                                    <div class="post-item-description"><span class="post-meta-date"><i
-                                                class="fa fa-calendar-o"></i>Запостил: {{$news[3]->created_at}}</span>
-                                        <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                                        <h2><a href="#">{{$news[3]->title}}</a></h2>
-                                        <p>{{$news[3]->content}}</p>
+                                        <h2><a href="#">{{$news[$i]->title}} </a></h2>
+                                        <p>{{$news[$i]->content}}</p>
                                         <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endfor
                     </div>
                 </section>
             </div>

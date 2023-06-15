@@ -11,6 +11,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfileEditController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VerificationEmailController;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Route;
@@ -73,3 +74,4 @@ Route::get("/order/payment/create",[\App\Http\Controllers\OrderController::class
 Route::get("/order/payment/callback",[\App\Http\Controllers\OrderController::class,'callbackPay'])->name("order.callback");
 
 Route::get('/search', [MainController::class, 'search'])->name('search');
+Route::get('/slider', [SliderController::class, 'slider'])->name('slider');
