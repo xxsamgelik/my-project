@@ -24,13 +24,30 @@ class MainController extends Controller
     }
     public function search(Request $request)
     {
-        $query = $request->query('query');
-        $users = User::where('name', 'LIKE', "%{$query}%")->get();
+        $query = $request->input('query');
+        $status = $request->input('status');
+
+        $users = User::query();
+
+        if (!empty($status)) {
+            $users->where('status', $status);
+        }
+
+        if (!empty($query)) {
+            $users->where('name', 'LIKE', "%{$query}%");
+        }
+
+        $users = $users->paginate(3);
 
         return view('like', [
             'users' => $users,
         ]);
     }
+
+
+
+
+
 
 
 }

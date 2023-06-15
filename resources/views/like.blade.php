@@ -2,14 +2,21 @@
 @section('content')
     <section id="page-content" class="sidebar-right">
         <div class="container-fluid">
-            <!-- post content -->
-            <!-- Page title -->
-            <!-- end: Page title -->
-            <!-- Blog -->
-            <form action="" method="GET">
-                <input type="text" name="query" placeholder="Поиск по пользователям">
-                <button type="submit">Поиск</button>
+            <form action="{{ route('search') }}" method="GET">
+                <div class="search-container">
+                    <input type="text" name="query" placeholder="Поиск по пользователям">
+                    <select name="status">
+                        <option value="">Все</option>
+                        <option value="Замужем">Замужем</option>
+                        <option value="В активном поиске">В активном поиске</option>
+                        <option value="Свободен">Свободен</option>
+                    </select>
+                    <button type="submit">Поиск</button>
+                </div>
             </form>
+
+
+
             <div id="blog" class="grid-layout post-5-columns m-b-30" data-item="post-item" data-stagger="10">
                 <!-- Post item-->
 
@@ -41,6 +48,7 @@
             <!-- end: Blog -->
             <!-- Pagination --><!-- end: Pagination -->
         </div>
+            {!! $users->appends(Request::all())->links() !!}
 
             <!-- end: post content -->
     </section> <!-- end: Content -->
@@ -48,8 +56,7 @@
     <!--Plugins-->
     <script src="{{asset("/js/jquery.js")}}"></script>
     <script src="{{asset("/js/plugins.js")}}"></script>
-
-    <!--Template functions-->
+    <link href="{{ asset('/css/searchFilters.css') }}" rel="stylesheet">
     <script src="{{asset("/js/functions.js")}}"></script>
 @endsection
 

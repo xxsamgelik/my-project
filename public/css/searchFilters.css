@@ -1,0 +1,58 @@
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"],
+.search-container select {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #336699;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/* Дополнительные стили по желанию */
+.search-input::placeholder {
+    color: #ccc;
+}
+#blog {
+    margin-top: 40px!important;
+}
+form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form select {
+    padding: 5px;
+    font-size: 14px;
+}
+
+form select {
+    width: auto;
+}
+
+form button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+
+form button:hover {
+    background-color: #333;
+}
+
