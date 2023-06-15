@@ -12,6 +12,8 @@
     <link href="{{ asset('/css/plugins.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/slick.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/slick-theme.css') }}" rel="stylesheet">
 </head>
 <div class="body-inner">
     <header id="header" @if ($isDarkHeader) data-transparent='false' @endif data-fullwidth="true"
@@ -65,6 +67,10 @@
                                 <li><a href="{{route('contact')}}">{{__('contacts')}}</a></li>
                                 @auth
                                     <li><a href="{{route('like')}}">{{__('feed')}}</a></li>
+                                @endauth
+                                @auth
+                                    <li><a href="{{route('slider')}}">{{__('slider')}}</a></li>
+
                                 @endauth
                                 <li><a href="{{route('news')}}">{{__('news')}}</a></li>
                                 @auth
@@ -133,9 +139,12 @@
         </div>
     </footer>
     <!--Plugins-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{asset("/js/jquery.js")}}"></script>
     <script src="{{asset("/js/plugins.js")}}"></script>
     <script src="{{asset("/js/functions.js")}}"></script>
+    <script src="{{ asset("/js/slick.js") }}"></script>
+
     <a id="scrollTop" class="scroll-to"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
 
 </div>

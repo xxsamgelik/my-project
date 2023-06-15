@@ -49,4 +49,10 @@ class User extends Authenticatable implements MustVerifyEmail,CanResetPassword
     {
         return $this->hasOne(UserInformation::class);
     }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class, 'user_id');
+    }
+
 }

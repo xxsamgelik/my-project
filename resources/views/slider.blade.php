@@ -1,37 +1,103 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="{{ asset('/css/slick.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/slick-theme.css') }}" rel="stylesheet">
-</head>
-<body>
-<div class="slider">
-    @dd($sliderItems)
-    @foreach($sliderItems as $item)
-        <div class="slider-item">
-            <img src="{{ $item->image }}" alt="{{ $item->name }}">
-            <h3>{{ $item->name }}</h3>
-        </div>
-    @endforeach
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="{{ asset("/js/slick.js") }}"></script>
-<script>
-    $(document).ready(function() {
-        $('.slider').slick({
-            dots: true, // Показывать точки-индикаторы слайдов
-            arrows: true, // Показывать стрелки для навигации
-            autoplay: true, // Автоматическое прокручивание слайдов
-            autoplaySpeed: 3000, // Задержка между автоматической прокруткой слайдов (в миллисекундах)
-            // Дополнительные настройки и параметры слайдера
-        });
-    });
+@extends('app')
+@section('content')
 
-</script>
-</body>
-</html>
+    <style>
+        .slider-container {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .slider {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slider-item {
+            text-align: center;
+        }
+
+        .slider-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .slider-item h3 {
+            margin-top: 10px;
+        }
+
+        .slider-item .buttons {
+            margin-top: 10px;
+        }
+
+        .slider-item .buttons button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .slider-item .buttons button:hover {
+            background-color: #222;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="slider-container">
+        <div class="slider">
+            @foreach($sliderItems as $item)
+                <div class="slider-item">
+                    <img src="{{ $item->image }}" alt="{{ $item->name }}">
+                    <h3>{{ $item->name }}</h3>
+
+                    <div class="buttons">
+                        <form action="{{ route('likee', ['user_id' => $item->user_id]) }}" method="POST" style="display: inline-block;">
+                            @csrf
+                            <button type="submit" class="like-button">Лайк</button>
+                        </form>
+
+                        <form action="{{ route('skip', ['user_id' => $item->user_id]) }}" method="POST" style="display: inline-block;">
+                            @csrf
+                            <button type="submit" class="skip-button">Пропустить</button>
+                        </form>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+    <script src="{{asset("/js/jquery.js")}}"></script>
+    <script src="{{ asset("/js/slick.js") }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('.slider').slick({
+                // Остальные настройки слайдера
+            });
+
+            // Обработчик события для кнопки "Лайк"
+            $('form').on('submit', function(e) {
+                e.preventDefault(); // Отмена отправки формы
+
+                var form = $(this);
+                var formData = form.serialize();
+
+                // Отправка AJAX-запроса на сервер
+                $.ajax({
+                    url: form.attr('action'),
+                    type: form.attr('method'),
+                    data: formData,
+                    success: function(response) {
+                        $('.slider').slick('slickNext'); // Переключение на следующий слайд
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(error); // Вывод ошибки в консоль
+                    }
+                });
+            });
+        });
+
+    </script>
+@endsection

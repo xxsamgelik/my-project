@@ -53,7 +53,6 @@
     </section> <!-- end: Content -->
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
     <!--Plugins-->
-    <script src="{{asset("/js/jquery.js")}}"></script>
     <script src="{{asset("/js/plugins.js")}}"></script>
     <link href="{{ asset('/css/searchFilters.css') }}" rel="stylesheet">
     <script src="{{asset("/js/functions.js")}}"></script>

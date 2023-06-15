@@ -74,4 +74,9 @@ Route::get("/order/payment/create",[\App\Http\Controllers\OrderController::class
 Route::get("/order/payment/callback",[\App\Http\Controllers\OrderController::class,'callbackPay'])->name("order.callback");
 
 Route::get('/search', [MainController::class, 'search'])->name('search');
-Route::get('/slider', [SliderController::class, 'slider'])->name('slider');
+Route::get('/slider', [SliderController::class, 'getSliderItems'])->name('slider');
+Route::post('/like/{user_id}', [SliderController::class, 'like'])->name('likee');
+Route::post('/skip/{user_id}', [SliderController::class, 'skip'])->name('skip');
+
+Route::get('/liked-users', 'UserController@likedUsers')->name('likedUsers');
+Route::get('/liked-users', [MainController::class, 'likedUsers'])->name('liked');

@@ -57,6 +57,8 @@
         "search_status": "В поиске",
         "married_status_for_male": "Женат",
         "married_status_for_female": "Замужем",
-        "relation_shipment_status": "В отношениях"
+        "relation_shipment_status": "В отношениях",
+    "slider": "Нравится"
+
 
 }

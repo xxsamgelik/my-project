@@ -44,6 +44,16 @@ class MainController extends Controller
         ]);
     }
 
+    public function likedUsers()
+    {
+        $likedUsers = auth()->user()->likes()->paginate(5);
+
+        return view('liked-users', ['likedUsers' => $likedUsers]);
+    }
+
+
+
+
 
 
 
