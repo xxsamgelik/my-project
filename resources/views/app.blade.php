@@ -72,6 +72,10 @@
                                     <li><a href="{{route('slider')}}">{{__('slider')}}</a></li>
 
                                 @endauth
+                                @auth
+                                    <li><a href="{{route('liked')}}">{{__('love')}}</a></li>
+
+                                @endauth
                                 <li><a href="{{route('news')}}">{{__('news')}}</a></li>
                                 @auth
                                     <li><a href="{{route('account.show')}}">{{__('account')}}</a></li>

@@ -1,8 +1,8 @@
 @extends('app')
 @section('content')
     <section id="page-content" class="sidebar-right">
+        <h1 class="text-center">{{__('loved')}}</h1>
     <div id="blog" class="grid-layout post-5-columns m-b-30" data-item="post-item" data-stagger="10">
-
     @foreach($likedUsers as $like)
         <div class="post-item border">
             <div class="post-item-wrap">

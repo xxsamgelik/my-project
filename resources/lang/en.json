@@ -55,9 +55,10 @@
     "female": "Female",
     "select_status": "Select your status",
     "search_status": "Searching",
-    "married_status_for_male": "Married",
     "married_status_for_female": "Married",
     "relation_shipment_status": "In a relationship",
-    "slider": "Like"
+    "slider": "Like",
+    "love": "Love",
+    "loved": "Liked"
 
 }

@@ -12,12 +12,12 @@
                 <p>{{__('about_us')}}</p>
                 <div class="m-t-60">
                     <div class="p-progress-bar-container title-up small extra-small color">
-                        <div class="p-progress-bar" data-percent="{{$userMale/$user*100}}" data-delay="100" data-type="%">
+                        <div class="p-progress-bar" data-percent="{{ round($userMale/$user*100) }}" data-delay="100" data-type="%">
                             <div class="progress-title">{{__('man_gender')}}</div>
                         </div>
                     </div>
                     <div class="p-progress-bar-container title-up small extra-small color">
-                        <div class="p-progress-bar" data-percent="{{$userFemale/$user*100}}" data-delay="100" data-type="%">
+                        <div class="p-progress-bar" data-percent="{{ round($userFemale/$user*100) }}" data-delay="100" data-type="%">
                             <div class="progress-title">{{__('women_gender')}}</div>
                         </div>
 

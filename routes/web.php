@@ -80,3 +80,4 @@ Route::post('/skip/{user_id}', [SliderController::class, 'skip'])->name('skip');
 
 Route::get('/liked-users', 'UserController@likedUsers')->name('likedUsers');
 Route::get('/liked-users', [MainController::class, 'likedUsers'])->name('liked');
+
