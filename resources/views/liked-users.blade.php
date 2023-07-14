@@ -10,7 +10,7 @@
                     <a href="#">
                         <img alt="" src="{{$like->likedUser->image}}">
                     </a>
-                    <span class="post-meta-category"><a href="">Lifestyle</a></span>
+                    <span class="post-meta-category"><a href="">{{$like->likedUser->status}}</a></span>
                 </div>
                 <div class="post-item-description">
                     <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
